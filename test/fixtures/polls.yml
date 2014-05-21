@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question_id: 
+  name: MyString
+  poll_number: 1
+
+two:
+  question_id: 
+  name: MyString
+  poll_number: 1

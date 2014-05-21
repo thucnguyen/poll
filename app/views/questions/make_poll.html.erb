@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @question.content %></strong>
+</p>
+
+<%= form_tag('poll_result', method: :put) do -%>
+	<% @question.polls.each do |poll| %>
+		<h4>
+			<%= radio_button_tag('option', poll.id)%>
+			<%= label_tag('option_' + poll.id.to_s, poll.name) %>
+		</h4>
+	<% end%>
+	
+	<%= submit_tag 'Submit'%>
+<% end -%>
