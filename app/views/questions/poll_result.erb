@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @question.content %></strong>
+</p>
+
+	<h3>Result</h3>
+	<% total = @question.polls.sum(:poll_number)%>
+	<% @question.polls.each do |poll|
+		color = "%06x" % (rand * 0xffffff) 
+		rate = poll.poll_number.to_f / total.to_f
+	%>
+		<h4 style="color: #<%= color%>"><%= poll.name << ": " << (rate*100).round(1).to_s%>%%</h4>
+		<div class="box_chart" style="background-color: #<%= color%>; width: <%= (400 * rate)%>px; color: #<%= color%>;"></div>
+	<% end%>

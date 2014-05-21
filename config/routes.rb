@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => 'questions#index'
+  
   resources :polls
 
   resources :questions do

@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy, :make_poll]
+  before_action :set_question, only: [:show, :edit, :update, :destroy, :make_poll, :poll_result]
 
   # GET /questions
   # GET /questions.json
@@ -14,8 +14,11 @@ class QuestionsController < ApplicationController
   
   # poll result
   def poll_result
-    pa = params
-    hey = 'hey ha'   
+    
+    # inscrement poll number
+    poll = Poll.find(params[:option])
+    poll.increment(:poll_number, by = 1)
+    poll.save
   end
 
   # GET /questions/1
