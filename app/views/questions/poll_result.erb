@@ -11,5 +11,7 @@
 		rate = poll.poll_number.to_f / total.to_f
 	%>
 		<h4 style="color: #<%= color%>"><%= poll.name << ": " << (rate*100).round(1).to_s%>%%</h4>
-		<div class="box_chart" style="background-color: #<%= color%>; width: <%= (400 * rate)%>px; color: #<%= color%>;"></div>
+		<div class="boxChartEmpty">
+			<div class="boxChart" style="background-color: #<%= color%>; width: <%= (400 * rate)%>px; color: #<%= color%>;"></div>
+		</div>
 	<% end%>
