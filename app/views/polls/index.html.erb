@@ -13,7 +13,7 @@
   <tbody>
     <% @polls.each do |poll| %>
       <tr>
-        <td><%= poll.question %></td>
+        <td><%= poll.question.content %></td>
         <td><%= poll.name %></td>
         <td><%= poll.poll_number %></td>
         <td><%= link_to 'Show', poll %></td>

@@ -7,3 +7,28 @@
   margin: 5px;
   height: 12px;
 }
+
+.answerTd {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 25px;
+  // border: 1px solid black;
+  float: left;
+}
+
+.answerTable {
+  table-layout:fixed; 
+  width: 600px;
+}
+
+.answerRemove {
+  // border:solid 1px green;
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.answerAdd {
+  margin-left: 220px;
+}
